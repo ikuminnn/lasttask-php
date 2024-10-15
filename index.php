@@ -1,6 +1,6 @@
-<?php include "header.php"; ?>
+<?php include ( './header.php' ); ?>
 
-<?php include "sidebar.php"; ?>
+<?php include ( './sidebar.php' ); ?>
 
   <!-- main -->
 <main class="u-main__container">
@@ -48,4 +48,4 @@
   </section>
 </main>
 
-<?php include 'footer.php';?>
+<?php include ( './footer.php' );?>
