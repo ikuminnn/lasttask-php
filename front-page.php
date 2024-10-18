@@ -2,29 +2,33 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>Raise Tech</title>
-    <meta name="description" content="練習">
+    <title>ダミーサイト</title>
+    <meta name="description" content="アメリカ本場の味を再現したハンバーガーショップ">
     <!-- viewport設定 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ファビコン -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <!-- googleフォント -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
-    <!-- ファビコン -->
-    <link rel="icon" href="/img/favicon.png">
     <!-- css -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/style.min.css">
   </head>
 
   <body class="u-container">
+    <!-- header -->
     <header class="l-header">
-      <h1 class="c-title__header"><a href="/">Hamburger</a></h1>
+      <h1 class="c-title__header"><a href="/front.html">Hamburger</a></h1>
       <div class="c-form__mark">
         <input type="search" name="search" class="c-form__keyword">
         <input type="submit" name="submit" value="検索" class="c-form__button">
       </div>
     </header>
+    <!-- サイドバーのメニュー -->
     <aside class="l-nav">
       <button class="c-button js-btn">
         <span class="c-button-line c-button-line1"></span>
@@ -113,11 +117,15 @@
         </div>
       </section>
     </main>
+
+    <!-- footer -->
     <footer class="l-footer">
       <div class="p-footer__content">
         <p><a href="#">ショップ情報</a><span><a href="#">ヒストリー</a></span></p>
         <p><small>Copyright: RaiseTech</small></p>
       </div>
     </footer>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/nav.js"></script>
   </body>
 </html>
