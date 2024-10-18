@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php language_attributes(); ?>">  //言語設定
+<html lang="<?php language_attributes(); ?>"> 
   <head>
     <meta charset="utf-8">
     <title><?php echo bloginfo('name'); ?></title>
