@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- ファビコン -->
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?> /img/favicon.png">
-    <!-- css -->
-    <link rel="stylesheet" href="/style.css">
 
     <?php wp_head(); ?>
   </head>
