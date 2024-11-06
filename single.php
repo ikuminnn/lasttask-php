@@ -7,12 +7,21 @@
       <!-- p-fv　ファーストビュー -->
       <section class="l-fv l-fv__single">
         <div class="l-fv__content-single">
-          <h2 class="c-title__single">チーズバーガー</h2>
+          <h2 class="c-title__single"><?php the_title(); ?>チーズバーガー</h2>
         </div>
       </section>
     <!-- Single page -->
       <article>
-        <div class="c-inner">
+        <?php
+        if ( have_posts() ) :
+          while ( have_posts() ) : the_post(); ?>
+            <div <?php post_class(); ?>>
+              <?php the_content(); ?>    //投稿の本文を出力
+          <?php endwhile;
+          else: ?>
+            <p>表示できる投稿がありません。</p>
+        <?php endif;  ?>
+        <!-- <div class="c-inner">
           <div class="c-text__single">
             <h2>h2チーズ発祥について</h2>
             <p>チーズの歴史を知って、より一層楽しくおいしくチーズバーガーを食べよう。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
@@ -73,7 +82,7 @@
               <img src="/img/ham-poteto.jpg" alt="チーズバーガー13">
             </div>
           </div>
-        </div>
+        </div> -->
       </article>
       <section class="c-list__single">
         <div class="c-inner">
@@ -144,15 +153,6 @@
       <p class="c-text__bold">boldboldboldboldboldboldboldboldboldbold</p>
     </main>
 
-    <!-- footer -->
-    <footer class="l-footer">
-      <div class="p-footer__content">
-        <!-- <img src="/img/footer-back.png" alt="フッター背景"> -->
-        <p><a href="#">ショップ情報</a><span><a href="#">ヒストリー</a></span></p>
-        <p><small>Copyright: RaiseTech</small></p>
-      </div>
-    </footer>
-    <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/nav.js"></script>
-  </body>
-</html>
+<?php get_sidebar(); ?>
+
+<?php get_footer(); ?>

@@ -20,83 +20,14 @@
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
         </div>
-        <section class="p-lists">
-          <figure class="p-list">
-            <img class="img-list" src="./img/menu-ham.jpg" alt="チーズバーガーの写真1">
-            <figcaption class="c-caption">
-              <h3>チーズバーガー</h3>
-              <h4>こだわり</h4>
-              <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-              <p><a class="c-button__menu" href="#">詳しく見る</a></p>
-            </figcaption>
-          </figure>
-          <figure class="p-list">
-            <img src="./img/menu-ham.jpg" alt="チーズバーガーの写真2">
-            <figcaption class="c-caption">
-              <h3>ダブルチーズバーガー</h3>
-              <h4>こだわり</h4>
-              <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-              <p><a class="c-button__menu" href="#">詳しく見る</a></p>
-            </figcaption>
-          </figure>
-          <figure class="p-list">
-            <img src="./img/menu-ham.jpg" alt="チーズバーガーの写真3">
-            <figcaption class="c-caption">
-              <h3>スペシャルチーズバーガー</h3>
-              <h4>こだわり</h4>
-              <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-              <p><a class="c-button__menu" href="#">詳しく見る</a></p>
-            </figcaption>
-          </figure>
-          <figure class="p-list">
-            <img src="./img/menu-ham.jpg" alt="チーズバーガーの写真4">
-            <figcaption class="c-caption">
-              <h3>濃厚チーズ</h3>
-              <h4>こだわり</h4>
-              <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-              <p><a class="c-button__menu" href="#">詳しく見る</a></p>
-            </figcaption>
-          </figure>
-          <figure class="p-list">
-            <img src="./img/menu-ham.jpg" alt="チーズバーガーの写真5">
-            <figcaption class="c-caption">
-              <h3>チーズソースがけ</h3>
-              <h4>こだわり</h4>
-              <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-              <p><a class="c-button__menu" href="#">詳しく見る</a></p>
-            </figcaption>
-          </figure>
-        </section>
+        <?php get_template_part( 'template/list-card' ); ?> //画像と説明の共通パーツ
       </article>
-      <!-- ページナビ　-->
-      <div class="p-pagenav">
-        <p>page 1/10</p>
-        <div class="c-pagenav__front"><a href="#" rel="前">前へ</a></div>
-        <ul class="c-pagenav__list">
-          <span><a class="c-pagenav__prev" href="#" rel="前"></a></span>
-          <li><a class="u-pagenav__list-border" href="#">1</a></li>
-          <li><a class="c-pagenav__list-border" href="#">2</a></li>
-          <li><a class="c-pagenav__list-border" href="#">3</a></li>
-          <li><a class="c-pagenav__list-border" href="#">4</a></li>
-          <li><a class="c-pagenav__list-border" href="#">5</a></li>
-          <li><a class="c-pagenav__list-border" href="#">6</a></li>
-          <li><a class="c-pagenav__list-border" href="#">7</a></li>
-          <li><a class="c-pagenav__list-border" href="#">8</a></li>
-          <li><a class="c-pagenav__list-border" href="#">9</a></li>
-          <span><a class="c-pagenav__next" href="#" rel="次"></a></span>
-        </ul>
-        <div class="c-pagenav__back"><a href="#" rel="次">次へ</a></div>
-      </div>
+
+      <?php
+        if ( function_exists( 'pagenation' ) ) {  //「pagenation」という関数が定義されていれば呼び出す
+          pagenation();
+        }   //elseはないが定義がなかったら呼び出さない
+      ?>
     </main>
 
     <!-- footer -->
